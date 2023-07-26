@@ -14,9 +14,11 @@ const uuid = () => {
       .substring(1);
   };
 
+// Middleware initialization
 app.use(express.static('public'));
 app.use(express.json());
 
+// Creating HTML routes for links
 app.get('/', (req, res) =>
     res.sendFile(path.join(__dirname, 'public/index.html'))
 )
